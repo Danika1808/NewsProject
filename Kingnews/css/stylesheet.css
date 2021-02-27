@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    width: max-content;
+}
+
+.date {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+.nav-search {
+    display: inline-block;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+input {
+    outline: none;
+    border: none;   
+    display: block;
+    line-height: 1.2em;
+    width: 140px;
+    
+}
+
+.form-input::placeholder {
+    color: black;
+    font-size: 18px;
+}
+
+.form-input:focus::placeholder {
+    color: transparent;
+    transition: 0.2s;
+}
+
+.form-input {
+    position: relative;
+    
+}
+
+.nav-right {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+.ul_links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: blue;
+}
+
+li:hover {
+    color: black;   
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.under:hover > .underline {
+    background: blue;
+}
+
+a::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #02AFFF;
+}
+
+.first-five {
+    position: relative;
+    top: 40px;
+    left: 45px;
+}
+
+.badge-span {
+    position: absolute;
+    color: black;
+    background: yellow;
+    padding: 4px 8px;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    top: 15px;
+}
+
+.featured-news .badge-ul {
+    margin-top: -15px;
+}
+
+.badge-span:hover {
+    background: black;
+    color: yellow;
+    transition: 0.8ms;
+}
+
+.latest-news .badge-span {
+    top: 5px;
+    left: 10px;
+}
+
+.latest-news .badge-ul {
+    margin-top: -15px;
+}
+
+.badge-li {
+    list-style: none;
+    color: black;   
+}
+
+.badge-a {
+    text-decoration: none;
+}
+
+.a_custom {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    line-height: 1.26;
+    text-shadow: black;
+}
+
+.h1_custom {
+    position: absolute;
+    bottom: 49px;
+    width: 700px;
+    height: 300px;
+    padding: 0 20px;
+}
+
+.h1_custom:hover {
+    background: rgba(0,0,0, 0.2);
+}
+
+.h1_custom:hover .a_custom {
+    color: dodgerblue;
+    transition: 0.8ms;
+}
+
+.h4_custom {
+    position: absolute;
+    top: 100px;
+    width: 325px;
+    height: 100px;
+    padding: 10px;
+}
+
+.a4_custom {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    line-height: 1;
+    text-shadow: black;
+}
+
+.h4_custom:hover .a4_custom {
+    color: dodgerblue;
+    transition: 0.8ms;
+}
+
+.h4_custom:hover {
+    background: rgba(0,0,0, 0.2);
+}
+.under_h4 {
+    position: relative;
+    top: -60px;
+    left: 14px;
+}
+.post-meta-time{
+    color: white;
+    text-decoration: none;
+}
+
+.post-meta-time:hover {
+    color: white;
+}
+
+.post-meta-time::before {
+    content: '\e192';
+    position: relative;
+    font-family: 'MaterialsIcon';
+    font-size: 20px;
+    font-style: normal;
+    top: 4px;
+    
+}
+
+time {
+    color: #02AFFF;
+    font-size: 16px;
+    font-family: "Noto Serif";
+}
+
+.popular-news {
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 90%;
+}
+
+
+.popular_news_head {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    line-height: 1.5;
+    font-size: 40px;
+}
+
+.head-devider {
+    position: relative;
+    display: inline-block;
+    padding-right: 8px;
+    padding-top: 30px;
+}
+
+.popular_news_head:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: #000;
+    width: 75vw;
+    height: 1px;
+    left: 100%;
+    bottom: 22px;
+}
+
+.devider:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: #000;
+    width: 95vw;
+    height: 1px;
+    left: 100%;
+    bottom: 22px;
+}
+
+
+.popular-news .custom_nav li a.active:after {
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #02AFFF;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+.popular-news .custom_nav li a:after {
+    display: block;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #02AFFF;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+
+.popular-news .custom_nav li a:hover:after, 
+.popular-news .custom_nav li a:focus:after {
+    width: 100%;    
+}
+
+.custom_nav {
+    margin-bottom: 0;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 70px!important;
+}
+
+.nav-link {
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    min-width: auto;
+    letter-spacing: normal;
+    text-transform: none;
+    font-family: "Noto Sans";
+    color: black;
+}
+
+.nav-link:hover{
+    border: none;
+    color: black;
+}
+
+.nav-item:hover{
+    border: none;
+}
+
+.post-meta-time time:hover {
+    color: white;
+}
+
+.popular-news > .tab-form {
+    display: none;
+}
+
+.popular-news > .active-form {
+    display: inline-block;
+}
+
+.devider-dashed {
+    border-top: 1px dotted #d2d1d1;
+    margin-bottom:30px;
+}
+
+.description {
+    font-weight: 300;
+}
+
+.news_name {
+    color: #000;
+    transition: .3s all ease;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25rem;
+    font-style: italic;
+}
+
+.popular-news .tab-form .news_name:hover {
+    color: #02AFFF;
+}
+
+.featured-news .news_name:hover {
+    color: #02AFFF;
+}
+
+.under_description {
+    position: relative;
+    left: -5px;
+    top: -10px;
+}
+
+.post-meta-time_desc{
+    color: grey;
+    text-decoration: none;
+}
+
+.post-meta-time_desc:hover {
+    color: grey;
+}
+
+.post-meta-time_desc::before {
+    content: '\e192';
+    position: relative;
+    font-family: 'MaterialsIcon';
+    font-size: 20px;
+    font-style: normal;
+    top: 4px;
+
+}
+
+time {
+    color: #02AFFF;
+    font-size: 16px;
+    font-family: "Noto Serif";
+}
+
+.desc-time:hover {
+    color: #000;
+}
+
+.featured-news {
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 90%;
+}
+
+.featured-news .news_name {
+    width: 50%!important;
+}
+
+.latest-news .news_name {
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.latest-news, .world-news{
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 90%;
+}
+
+.latest-news .description {
+    position: relative;
+    width: 60%;
+    left: 40px;
+    top: 20px;
+}
+
+.unit {
+    display: flex;
+    flex-direction: row!important;
+    margin: 25px;
+}
+
+.latest-news .under_description {
+    top: -6px;
+    left: 15px;
+}
+
+.post-meta-comment {
+    width: max-content;
+    position: relative;
+    top: -6px;
+    left: 15px;
+}
+
+.post-meta-comment:hover {
+    color: black;
+}
+
+.post-meta-comment{
+    color: #02AFFF;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+    font-family: "Noto Serif";
+    font-style: italic;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.post-meta-comment:before{
+    content: '\e0cb';
+    font-family: "MaterialsIcon";
+    font-size: 20px;
+    font-style: normal;
+    vertical-align: middle;
+    margin-right: 4px;
+    color: grey;
+}
+
+.person-link {
+    color: #02AFFF;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+    font-family: "Noto Serif";
+    font-style: italic;
+    font-size: 17px;
+}
+
+.person-link:hover {
+    color: black;
+}
+
+.world-news .news_name {
+    color: black;
+    transition: 0.2s ease-in;
+    text-decoration: none;
+    font-family: "Noto Serif";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.world-news .news_name:hover{
+    color: #02AFFF;
+}
+
+.world-news .text-block {
+    margin-left: 50px;
+    margin-top: 28px;
+    height: max-content;
+}
+
+.btn-warning {
+    color: black;
+    background-color: #fff602!important;
+    border-color: #fff602!important;
+}
+
+.btn-warning:hover{
+    color: #ffffff!important;
+    background-color: #333333!important;
+    border-color: #333333!important;
+    box-shadow: none!important;
+}
+
+.btn {
+    padding: 13px 28px!important;
+    transition: .3s ease-out!important;
+    font-family: "Noto Serif", serif !important;
+    font-weight: 700!important;
+    font-size: 20px!important;
+    border-radius: 0px!important;
+}
+
+
+.footer-row {
+    margin-left: 30px;
+    padding-top: 10px;
+}
+
+p.rights {
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    margin-top: 47px;
+    margin-left: 10px;
+}
+
+p.rights a {
+    color: #02AFFF;
+    text-decoration: none;
+}
+
+p.rights a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.list-inline-0 > li {
+    display: inline-block;
+}
+
+.icon.icon-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.icon-circle {
+    border-radius: 50%;
+}
+
+.icon {
+    display: inline-block;
+    text-align: center;
+    transition: .3s;
+}
+
+.icon-default {
+    background-color: #ffffff;
+    color: #999999;
+}
+
+.icon-default:hover {
+    background-color: #fff602;
+    color: #000;
+}
+
+.icon:before{
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.facebook-before:before {
+    content: "\f09a";
+    font-family: 'FontAwesome';
+}
+
+.instagram-before:before {
+    content: "\f16d";
+    font-family: 'FontAwesome';
+}
+
+
+@font-face {
+    font-family: "MaterialsIcon";
+    src: url(fonts/MaterialIcons-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot");
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot") 
+    format("embedded-opentype"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff") format("woff"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf") format("truetype"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
