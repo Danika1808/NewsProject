@@ -84,7 +84,7 @@ a::after {
 .first-five {
     position: relative;
     top: 40px;
-    left: 45px;
+    padding-left: 20px;
 }
 
 .badge-span {
