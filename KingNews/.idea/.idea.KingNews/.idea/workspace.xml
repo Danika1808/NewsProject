@@ -23,8 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f725b78b-de0c-43f7-8a95-1e112e62d5f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/News.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/News.Web/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/News.Web/wwwroot/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/News.Web/wwwroot/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/News.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/News.Web/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/News.Web/wwwroot/css/stylesheet.css" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/News.Web/Views/Shared/_Layout.cshtml" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1rodgQtOshyXp67Dv8tlq0viTx3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -95,6 +95,7 @@
       <updated>1619646489532</updated>
       <workItem from="1619646493884" duration="109000" />
       <workItem from="1619647316673" duration="166000" />
+      <workItem from="1619648147607" duration="592000" />
     </task>
     <servers />
   </component>
@@ -135,39 +136,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619646604000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/News.Web/Views/Home/Index.cshtml</url>
-          <line>4</line>
-          <properties documentPath="C:\Users\danik\OneDrive\Documents\GIthub\NewsProject\KingNews\News.Web\Views\Home\Index.cshtml" initialLine="4" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/News.Web/Views/Home/Index.cshtml</url>
-          <line>799</line>
-          <properties documentPath="C:\Users\danik\OneDrive\Documents\GIthub\NewsProject\KingNews\News.Web\Views\Home\Index.cshtml" initialLine="872" isMultiMethodBreakpoint="true">
-            <option name="multiMethodBreakpoint" value="true" />
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
