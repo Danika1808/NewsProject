@@ -21,11 +21,11 @@ body {
 
 input {
     outline: none;
-    border: none;   
+    border: none;
     display: block;
     line-height: 1.2em;
     width: 140px;
-    
+
 }
 
 .form-input::placeholder {
@@ -40,7 +40,7 @@ input {
 
 .form-input {
     position: relative;
-    
+
 }
 
 .nav-right {
@@ -59,7 +59,7 @@ input {
 }
 
 li:hover {
-    color: black;   
+    color: black;
 }
 
 .main-nav {
@@ -84,7 +84,7 @@ a::after {
 .first-five {
     position: relative;
     top: 40px;
-    left: 45px;
+    padding-left: 20px;
 }
 
 .badge-span {
@@ -120,7 +120,7 @@ a::after {
 
 .badge-li {
     list-style: none;
-    color: black;   
+    color: black;
 }
 
 .badge-a {
@@ -197,7 +197,7 @@ a::after {
     font-size: 20px;
     font-style: normal;
     top: 4px;
-    
+
 }
 
 time {
@@ -269,9 +269,9 @@ time {
     transition: width 0.3s ease-out;
 }
 
-.popular-news .custom_nav li a:hover:after, 
+.popular-news .custom_nav li a:hover:after,
 .popular-news .custom_nav li a:focus:after {
-    width: 100%;    
+    width: 100%;
 }
 
 .custom_nav {
@@ -584,7 +584,7 @@ p.rights a:hover {
 @font-face {
     font-family: 'FontAwesome';
     src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot");
-    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot") 
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot")
     format("embedded-opentype"),
     url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2"),
     url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff") format("woff"),
