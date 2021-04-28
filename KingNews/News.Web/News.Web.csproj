@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-News.Web-217BC17F-5DBF-4094-B45F-529D1A749BB6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\News.Data.EF\News.Data.EF.csproj" />
+  </ItemGroup>
+
+</Project>
