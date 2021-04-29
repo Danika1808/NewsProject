@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace News.Web.App
 {
-    class User : IdentityUser
+    public class User : IdentityUser
     {
+        public UserProfile Profile { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\News.Web.App\News.Web.App.csproj" />
     <ProjectReference Include="..\News\News.csproj" />
   </ItemGroup>
 

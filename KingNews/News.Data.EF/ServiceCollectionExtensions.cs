@@ -18,7 +18,7 @@ namespace News.Data.EF
             );
 
             services.AddScoped<Dictionary<Type, Context>>();
-
+            services.AddSingleton<INewsRepository, NewsRepository>();
             return services;
         }
     }

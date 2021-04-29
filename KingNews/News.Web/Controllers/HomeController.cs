@@ -1,25 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using News.Web.Models;
+using News.Web.App;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using News.Web.Models;
 
 namespace News.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly INewsRepository _repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(INewsRepository repository)
         {
-            _logger = logger;
+            _repository = repository;
         }
 
         public IActionResult Index()
         {
+            var category = new Category();
+            category.Name = "Test";
+            var news = new News("Kek", DateTime.Now, 17.0m, category, "lol", null);
+            _repository.Create(news);
             return View();
         }
 
