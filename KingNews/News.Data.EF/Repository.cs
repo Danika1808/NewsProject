@@ -10,9 +10,7 @@ namespace News.Data.EF
     {
         readonly DbContext _context;
         readonly DbSet<T> _dbSet;
-
         private readonly DbContextFactory _dbContextFactory;
-
   
         public Repository(DbContextFactory dbContextFactory)
         {

@@ -26,7 +26,7 @@ namespace News.Web
         {
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
-            services.AddEfRepositories("Server=dtsitis.postgres.database.azure.com;UserName=postgres@dtsitis;Database=postgres;Port=5432;Password=12345Qwert;SSLMode=Prefer");
+            services.AddEfRepositories(Configuration.GetConnectionString("dbConnectionString"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

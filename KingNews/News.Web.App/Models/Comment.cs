@@ -15,9 +15,9 @@ namespace News.Web.App
         [MaxLength(20, ErrorMessage = "Line length exceeded")]
         public string Content { get; protected set; }
 
-        public DataType date_of_publication { get; protected set; }
+        public DateTime Date { get; protected set; }
 
-         [ForeignKey("AspNetUsers")]
+        [ForeignKey("AspNetUsers")]
         public User User { get; protected set; }
 
 
