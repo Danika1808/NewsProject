@@ -9,7 +9,7 @@ namespace News.Data.EF
     {
         public static IServiceCollection AddEfRepositories(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContextFactory<Context>(
+            services.AddDbContext<Context>(
                 options =>
                 {
                     options.UseNpgsql(connectionString);
@@ -18,7 +18,8 @@ namespace News.Data.EF
             );
 
             services.AddScoped<Dictionary<Type, Context>>();
-            services.AddSingleton<INewsRepository, NewsRepository>();
+            services.AddSingleton<DbContextFactory>();
+            services.AddSingleton<IRepository<News>, Repository<News>>();
             return services;
         }
     }

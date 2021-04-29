@@ -13,9 +13,9 @@ namespace News.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly INewsRepository _repository;
+        private readonly IRepository<News> _repository;
 
-        public HomeController(INewsRepository repository)
+        public HomeController(IRepository<News> repository)
         {
             _repository = repository;
         }

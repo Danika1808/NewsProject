@@ -7,16 +7,13 @@ using System.Collections.Generic;
 
 namespace News.Data.EF
 {
-    class DbContextFactory : IDesignTimeDbContextFactory<Context>
+    class DbContextFactory
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public DbContextFactory(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
-        }
-        public DbContextFactory()
-        { 
         }
 
         public Context Create(Type repositoryType)
@@ -28,14 +25,6 @@ namespace News.Data.EF
                 dbContexts[repositoryType] = services.GetService<Context>();
 
             return dbContexts[repositoryType];
-        }
-
-        public Context CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<Context>();
-            optionsBuilder.UseNpgsql("Server=dtsitis.postgres.database.azure.com;UserName=postgres@dtsitis;Database=postgres;Port=5432;Password=12345Qwert;SSLMode=Prefer");
-
-            return new Context(optionsBuilder.Options);
         }
     }
 }

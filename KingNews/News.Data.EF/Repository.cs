@@ -8,18 +8,17 @@ namespace News.Data.EF
 {
     class Repository<T> : IRepository<T> where T : class
     {
-        DbContext _context;
-        DbSet<T> _dbSet;
+        readonly DbContext _context;
+        readonly DbSet<T> _dbSet;
 
         private readonly DbContextFactory _dbContextFactory;
 
-        
-
-        public Repository(DbContext context, DbContextFactory dbContextFactory)
+  
+        public Repository(DbContextFactory dbContextFactory)
         {
             _dbContextFactory = dbContextFactory;
-            _context = context;
-            _dbSet = context.Set<T>();
+            _context = _dbContextFactory.Create(typeof(Repository<T>));
+            _dbSet = _context.Set<T>();
         }
 
         public IEnumerable<T> Get()
