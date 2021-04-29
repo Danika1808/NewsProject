@@ -12,6 +12,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.3" />
+    <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.1.1" />
   </ItemGroup>
 
   <ItemGroup>
