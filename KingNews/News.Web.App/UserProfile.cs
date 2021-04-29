@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace News.Web.App
 {
-    class UserProfile
+    public class UserProfile
     {
         public Guid Id { get; protected set; }
 

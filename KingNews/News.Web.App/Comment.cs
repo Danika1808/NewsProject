@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace News.Web.App
 {
-    class Comment
+    public class Comment
     {
     }
 }
