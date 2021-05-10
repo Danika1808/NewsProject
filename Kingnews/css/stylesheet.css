@@ -249,6 +249,43 @@ time {
     bottom: 22px;
 }
 
+.main-nav li a.active:after {
+    display: block;
+    left: 50%;
+    right: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: #02AFFF;
+    content: "";
+    transition: all 0.3s ease-out;
+    z-index: 1;
+}
+
+.main-nav a.active {
+    text-decoration: none;
+    color: black;
+}
+
+.px a {
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+.main-nav li a:after {
+    display: block;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #02AFFF;
+    content: "";
+    transition: all 0.3s ease-out;
+}
+
+.main-nav li a:hover:after,
+.main-nav li a:focus:after {
+    width: 100%;
+}
 
 .popular-news .custom_nav li a.active:after {
     display: block;
@@ -279,6 +316,11 @@ time {
     margin-top: 20px;
     text-align: center;
     padding-left: 70px!important;
+    border: none!important;
+}
+
+.custom_nav li a {
+    border: none!important;
 }
 
 .nav-link {
