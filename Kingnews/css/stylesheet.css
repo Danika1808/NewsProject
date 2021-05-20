@@ -617,7 +617,103 @@ p.rights a:hover {
     font-family: 'FontAwesome';
 }
 
+.font-weight-medium {
+    font-weight: 500;
+}
 
+.list {
+    width: 100%;
+}
+
+.heading-devider {
+    padding-top: 36px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.offset-top-20 {
+    margin-top: 20px;
+}
+
+.heading-italic {
+    font-family: 'Noto-Serif', serif;
+    font-style: italic;
+}
+
+.font-weight-regular {
+    font-weight: 500;
+}
+
+h2.font-weight-regular {
+    font-size: 40px;
+}
+
+.rd-mailform {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.form-wrap {
+    text-align: left;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.rd-mailform label {
+    font-weight: inherit;
+}
+
+.form-label {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-size: 14px;
+    line-height: 24px;
+    pointer-events: none;
+    text-align: left;
+    z-index: 9;
+    color: #000;
+    transition: .25s;
+    will-change: transform;
+    transform: translateY(-50%);
+    font-family: "Noto-Serif";
+    font-style: italic;
+}
+
+label {
+    cursor: pointer;
+}
+
+.rd-mailform-gray-light-skin.form-input {
+    background: #efefef;
+    border-color: #d2d1d1;
+    color: #000;
+}
+
+.rd-mailform input {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 7px 18px;
+    line-height: 34px;
+    font-family: "Noto-Serif";
+    font-style: italic;
+    border-radius: 0;
+    height: 50px;
+}
+
+.form-input:focus {
+    color: #495057;
+    background-color: #fff;
+}
+
+.rd-mailform input:focus {
+    border: 1px solid #d2d1d1;
+}
 @font-face {
     font-family: "MaterialsIcon";
     src: url(fonts/MaterialIcons-Regular.woff2) format("woff2");
