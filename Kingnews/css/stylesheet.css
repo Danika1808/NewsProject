@@ -688,10 +688,10 @@ label {
     cursor: pointer;
 }
 
-.rd-mailform-gray-light-skin.form-input {
+.rd-mailform-gray-light-skin .form-input {
     background: #efefef;
-    border-color: #d2d1d1;
     color: #000;
+    border: 1px solid #d2d1d1;
 }
 
 .rd-mailform input {
@@ -711,9 +711,44 @@ label {
     background-color: #fff;
 }
 
-.rd-mailform input:focus {
+.valid {
     border: 1px solid #d2d1d1;
 }
+
+.invalid {
+    border: 1px solid red!important;
+}
+
+.focus {
+    opacity: 0;
+}
+
+textarea.form-input {
+    height: 135px;
+    min-height:50px;
+    max-height: 230px;
+    resize: vertical;
+}
+
+.rd-mailform textarea {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 7px 18px;
+    line-height: 34px;
+    font-style: italic;
+}
+
+.rd-mailform textarea:focus {
+    outline: none;
+}
+
+.list a:hover {
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
 @font-face {
     font-family: "MaterialsIcon";
     src: url(fonts/MaterialIcons-Regular.woff2) format("woff2");

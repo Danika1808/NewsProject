@@ -93,7 +93,6 @@
                 Contacts
             </h2>
         </div>
-        <form class="latest-news-content">
             <div class="col-xl-8">
                 <ul class="list-unstyled list">
                     <li>
@@ -120,13 +119,27 @@
                 </p>
                 <form class="rd-mailform rd-mailform-gray-light-skin" method="post" novalidate="novalidate">
                     <div class="form-wrap">
-                        <label class="form-label rd-input-label" for="contact-name">Your name *</label>
-                        <input class="form-input form-control-has-validation form-control-last-child" id="contact-name" type="text" name="name">
+                        <label class="form-label rd-input-label" for="contact-name" id="contact-name-label">Your name *</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" required id="contact-name" type="text" name="name">
+                    </div>
+                    <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="contact-email" id="contact-email-label">E-Mail *</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="email">
+                    </div>
+                    <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="your-website" id="your-website-label">Your Website *</label>
+                        <input class="form-input form-control-has-validation form-control-last-child" id="your-website" type="text" name="website">
+                    </div>
+                    <div class="form-wrap">
+                        <label class="form-label rd-input-label" for="message" id="message-label">Your Website *</label>
+                        <textarea class="form-input form-control-has-validation form-control-last-child" id="message" type="text" name="message"></textarea>
+                    </div>
+                    <div class="text-lg-left form-wrap form-button">
+                        <button class="btn btn-warning">Send</button>
                     </div>
                 </form>
             </div>
             <div class="devider-dashed" style="width: 100%; margin: 35px;"></div>
-        </form>
     </div>
 </main>
 <footer>
