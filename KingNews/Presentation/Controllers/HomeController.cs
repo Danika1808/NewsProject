@@ -24,9 +24,66 @@ namespace Presentation.Controllers
 
         public IActionResult Index()
         {
+            var categories = _context.Categories.ToList();
 
-            var posts = _context.Posts.Include(x => x.Category).Include(x => x.Photos);
-            return View(posts);
+            var dict = new Dictionary<string, Category>();
+
+            foreach (var item in categories)
+            {
+                dict.Add(item.Name, item);
+            }
+
+            var posts = new List<Post>
+            {
+                new Post
+                {
+                    Category = {dict["Tech"], dict["Sports"] },
+                    Name = "Penis",
+                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
+                    Date = DateTime.UtcNow,
+                    Photos =
+                    {
+                        new Photo
+                        {
+                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
+                        }
+                    },
+                    Rating = 5.0M
+                },
+                new Post
+                {
+                    Category = {dict["Tech"], dict["Sports"] },
+                    Name = "Penis",
+                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
+                    Date = DateTime.UtcNow,
+                    Photos =
+                    {
+                        new Photo
+                        {
+                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
+                        }
+                    },
+                    Rating = 5.0M
+                },
+                new Post
+                {
+                    Category = {dict["Tech"], dict["Sports"] },
+                    Name = "Penis",
+                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
+                    Date = DateTime.UtcNow,
+                    Photos =
+                    {
+                        new Photo
+                        {
+                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
+                        }
+                    },
+                    Rating = 5.0M
+                },
+            };
+            _context.Posts.AddRange(posts);
+            _context.SaveChanges();
+            return View();
         }
 
         public IActionResult Privacy()
