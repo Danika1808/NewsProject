@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
 using Infrastructure.Context;
-using Infrastructure.Repository;
-using Domain.Models.News;
 
 namespace Infrastructure
 {
@@ -19,10 +17,6 @@ namespace Infrastructure
                 },
                 ServiceLifetime.Transient
             );
-
-            services.AddScoped<Dictionary<Type, AppDbContext>>();
-            services.AddSingleton<DbContextFactory>();
-            services.AddSingleton<IRepository<Post>, Repository<Post>>();
             return services;
         }
     }

@@ -6,24 +6,27 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using News.Web.Models;
-using Infrastructure.Repository;
 using Domain.Models.News;
+using Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
+using Presentation.Models;
 
-namespace News.Web.Controllers
+namespace Presentation.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IRepository<Post> _repository;
+        private readonly AppDbContext _context;
 
-        public HomeController(IRepository<Post> repository)
+        public HomeController(AppDbContext context)
         {
-            _repository = repository;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+
+            var posts = _context.Posts.Include(x => x.Category).Include(x => x.Photos);
+            return View(posts);
         }
 
         public IActionResult Privacy()

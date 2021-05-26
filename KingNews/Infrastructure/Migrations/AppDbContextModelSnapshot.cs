@@ -19,6 +19,21 @@ namespace Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+            modelBuilder.Entity("CategoryPost", b =>
+                {
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("EntitiesId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("CategoryId", "EntitiesId");
+
+                    b.HasIndex("EntitiesId");
+
+                    b.ToTable("CategoryPost");
+                });
+
             modelBuilder.Entity("Domain.Models.Identity.Comment", b =>
                 {
                     b.Property<Guid>("Id")
@@ -144,10 +159,9 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Models.News.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -159,15 +173,19 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Models.News.Photo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Patch")
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("PostId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PostId");
 
                     b.ToTable("Photos");
                 });
@@ -178,17 +196,11 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Content")
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp without time zone");
-
-                    b.Property<int?>("ImageId")
-                        .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -197,10 +209,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("ImageId");
 
                     b.ToTable("Posts");
                 });
@@ -335,6 +343,21 @@ namespace Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("CategoryPost", b =>
+                {
+                    b.HasOne("Domain.Models.News.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.News.Post", null)
+                        .WithMany()
+                        .HasForeignKey("EntitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Domain.Models.Identity.Comment", b =>
                 {
                     b.HasOne("Domain.Models.News.Post", "Post")
@@ -359,19 +382,11 @@ namespace Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Domain.Models.News.Post", b =>
+            modelBuilder.Entity("Domain.Models.News.Photo", b =>
                 {
-                    b.HasOne("Domain.Models.News.Category", "Category")
-                        .WithMany("Entities")
-                        .HasForeignKey("CategoryId");
-
-                    b.HasOne("Domain.Models.News.Photo", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageId");
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Image");
+                    b.HasOne("Domain.Models.News.Post", null)
+                        .WithMany("Photos")
+                        .HasForeignKey("PostId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -432,9 +447,9 @@ namespace Infrastructure.Migrations
                     b.Navigation("Profile");
                 });
 
-            modelBuilder.Entity("Domain.Models.News.Category", b =>
+            modelBuilder.Entity("Domain.Models.News.Post", b =>
                 {
-                    b.Navigation("Entities");
+                    b.Navigation("Photos");
                 });
 #pragma warning restore 612, 618
         }

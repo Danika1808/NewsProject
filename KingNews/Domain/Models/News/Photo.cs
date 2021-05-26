@@ -8,10 +8,10 @@ namespace Domain.Models.News
 {
     public class Photo
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Patch { get; set; }
 
-        protected Photo()
+        public Photo()
         {
         }
     }

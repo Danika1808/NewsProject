@@ -5,7 +5,7 @@ using Domain.Models.News;
 
 namespace Infrastructure.Context
 {
-    class AppDbContext : IdentityDbContext<User>
+    public class AppDbContext : IdentityDbContext<User>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         { }

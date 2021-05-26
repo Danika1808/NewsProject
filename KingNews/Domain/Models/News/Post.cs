@@ -8,15 +8,15 @@ namespace Domain.Models.News
 {
     public class Post
     {
-        public Guid Id { get; protected set; }
-        public string Name { get; protected set; }
-        public DateTime Date { get; protected set; }
-        public decimal Rating { get; protected set; }
-        public Category Category { get; protected set; }
-        public string Content { get; protected set; }
-        public Photo? Image { get; protected set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Rating { get; set; }
+        public List<Category> Category { get; set; }
+        public string Content { get; set; }
+        public List<Photo> Photos { get; set; }
 
-        protected Post()
+        public Post()
         {
         }
     }

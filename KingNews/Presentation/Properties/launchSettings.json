@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "News.Web": {
+    "Presentation": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
