@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-News.Web-D1B2C0C4-DE4B-4986-A41B-C1953F581975</UserSecretsId>
-  </PropertyGroup>
-
-</Project>
