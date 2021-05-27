@@ -51,16 +51,9 @@
             <ul class="main-nav">
                 <li class="px-3 under active">
                     <a>Home</a>
-
                 </li>
                 <li class="px-3">Pages</li>
-                <li class="px-3">Politics</li>
-                <li class="px-3">Business</li>
-                <li class="px-3">Sports</li>
-                <li class="px-3">Culture</li>
-                <li class="px-3">Tech</li>
-                <li class="px-3">World</li>
-                <li class="px-3">About</li>
+                @await Component.InvokeAsync("Categories")
                 <li class="px-3">Contacts</li>
                 <li class="px-3">Post Types</li>
             </ul>

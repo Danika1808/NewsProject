@@ -44,6 +44,7 @@ namespace Presentation.Controllers
                 .OrderByDescending(x => x.Date)
                 .Include(x => x.Category)
                 .Include(x => x.Photos)
+                .Include(x => x.Comments)
                 .Take(5).ToList();
 
             var worldPosts = _context.Posts
@@ -51,6 +52,7 @@ namespace Presentation.Controllers
                 .OrderByDescending(x => x.Date)
                 .Include(x => x.Category)
                 .Include(x => x.Photos)
+                .Include(x => x.Comments)
                 .Take(5).ToList();
 
             var indexViewModel = new IndexViewModel
