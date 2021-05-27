@@ -10,6 +10,7 @@ using Domain.Models.News;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Presentation.Models;
+using System.Linq.Expressions;
 
 namespace Presentation.Controllers
 {
@@ -24,66 +25,42 @@ namespace Presentation.Controllers
 
         public IActionResult Index()
         {
-            var categories = _context.Categories.ToList();
 
-            var dict = new Dictionary<string, Category>();
+            var actualPosts = _context.Posts
+                .Where(x => x.Category.Any(y => y.Name.Equals("Politics") || y.Name.Equals("World")))
+                .OrderByDescending(x => x.Rating)
+                .Take(5)
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .ToList();
 
-            foreach (var item in categories)
+            var popularPosts = _context.Posts
+                .OrderByDescending(x => x.Rating)
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .Take(5).ToList();
+
+            var latestPosts = _context.Posts
+                .OrderByDescending(x => x.Date)
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .Take(5).ToList();
+
+            var worldPosts = _context.Posts
+                .Where(x => x.Category.Any(y => y.Name.Equals("World")))
+                .OrderByDescending(x => x.Date)
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .Take(5).ToList();
+
+            var indexViewModel = new IndexViewModel
             {
-                dict.Add(item.Name, item);
-            }
-
-            var posts = new List<Post>
-            {
-                new Post
-                {
-                    Category = {dict["Tech"], dict["Sports"] },
-                    Name = "Penis",
-                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
-                    Date = DateTime.UtcNow,
-                    Photos =
-                    {
-                        new Photo
-                        {
-                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
-                        }
-                    },
-                    Rating = 5.0M
-                },
-                new Post
-                {
-                    Category = {dict["Tech"], dict["Sports"] },
-                    Name = "Penis",
-                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
-                    Date = DateTime.UtcNow,
-                    Photos =
-                    {
-                        new Photo
-                        {
-                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
-                        }
-                    },
-                    Rating = 5.0M
-                },
-                new Post
-                {
-                    Category = {dict["Tech"], dict["Sports"] },
-                    Name = "Penis",
-                    Content = "Член в принципе хороший, симметричная форма, но стоит побрить а так 8/5",
-                    Date = DateTime.UtcNow,
-                    Photos =
-                    {
-                        new Photo
-                        {
-                            Patch = "assets/1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp"
-                        }
-                    },
-                    Rating = 5.0M
-                },
+                ActualPosts = actualPosts,
+                PopularPosts = popularPosts,
+                LatestPosts = latestPosts,
+                WorldPosts = worldPosts
             };
-            _context.Posts.AddRange(posts);
-            _context.SaveChanges();
-            return View();
+            return View(indexViewModel);
         }
 
         public IActionResult Privacy()

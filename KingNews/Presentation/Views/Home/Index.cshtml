@@ -1,37 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@using Domain.Models.News
 
-@model List<Post>
+@model IndexViewModel
 
 <div class="first-five row w-100">
-        <div class="big-one col-6">
-            <img src="assets/index-01.jpg" style="width: 700px;">
-            <div class="caption">
-                <ul class="badge-ul">
-                    <li class="badge-li">
-                        <a class="badge-a" href="#">
-                            <span class="badge-span">News</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="h1 h1_custom">
-                    <a class="a_custom" href="#">
-                        If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational President We
-                        Hoped
-                        For
+    <div class="big-one col-6">
+        <img src="@Model.ActualPosts.First().Photos.First().Patch" style="width: 700px;">
+        <div class="caption">
+            <ul class="badge-ul">
+                <li class="badge-li">
+                    <a class="badge-a" href="#">
+                        <span class="badge-span">@Model.ActualPosts.First().Category.First().Name</span>
                     </a>
-                </div>
-                <div class="under_h4">
-                    <div>
-                        <a class="post-meta-time" href="#">
-                            <time datetime="2020-06-06">2h ago</time>
-                        </a>
-                    </div>
+                </li>
+            </ul>
+            <div class="h1 h1_custom">
+                <a class="a_custom" href="#">
+                    @Model.ActualPosts.First().Name
+                </a>
+            </div>
+            <div class="under_h4">
+                <div>
+                    <a class="post-meta-time" href="#">
+                        <time datetime="2020-06-06">@Model.ActualPosts.First().Date</time>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
         <div name="lil-news-columns" class="col-6 d-inline-block">
             <div class="d-inline-block col-6">
                 <div>
