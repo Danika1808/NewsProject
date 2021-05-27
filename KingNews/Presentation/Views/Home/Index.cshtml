@@ -1,0 +1,788 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IndexViewModel
+
+<div class="first-five row w-100">
+    <div class="big-one col-6">
+        <img src="@Model.ActualPosts.First().Photos.First().Patch" style="width: 700px;">
+        <div class="caption">
+            <ul class="badge-ul">
+                <li class="badge-li">
+                    <a class="badge-a" href="#">
+                        <span class="badge-span">@Model.ActualPosts.First().Category.First().Name</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="h1 h1_custom">
+                <a class="a_custom" href="#">
+                    @Model.ActualPosts.First().Name
+                </a>
+            </div>
+            <div class="under_h1">
+                <div>
+                    <a class="post-meta-time" href="#">
+                        <time datetime="2020-06-06">@Model.ActualPosts.First().Date</time>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 d-inline-block">
+        <div class="d-inline-block col-6">
+            @foreach (var item in Model.ActualPosts.Skip(1).Take(2))
+            {
+                <div>
+                    <img src="@item.Photos.First().Patch" style="height: 250px;">
+                    <div class="caption">
+                        <ul class="badge-ul">
+                            <li class="badge-li">
+                                <a class="badge-a" href="#">
+                                    <span class="badge-span">@item.Category.First().Name</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="h4 h4_custom">
+                            <a class="a4_custom" href="#">
+                                @item.Name
+                            </a>
+                        </div>
+                        <div class="under_h4">
+                            <div>
+                                <a class="post-meta-time" href="#">
+                                    <time datetime="2020-06-06">@item.Date</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="d-inline-block col-5" style="position: relative; left: 35px;">
+            @foreach (var item in Model.ActualPosts.Skip(3).Take(2))
+            {
+                <div>
+                    <img src="@item.Photos.First().Patch" style="height: 250px;">
+                    <div class="caption">
+                        <ul class="badge-ul">
+                            <li class="badge-li">
+                                <a class="badge-a" href="#">
+                                    <span class="badge-span">@item.Category.First().Name</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="h4 h4_custom">
+                            <a class="a4_custom" href="#">
+                                @item.Name
+                            </a>
+                        </div>
+                        <div class="under_h4">
+                            <div>
+                                <a class="post-meta-time" href="#">
+                                    <time datetime="2020-06-06">@item.Date</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
+<div class="popular-news">
+<div class="head-devider">
+    <h2 class="popular_news_head pb-0">
+        Popular News
+    </h2>
+</div>
+<ul class="nav-tabs nav custom_nav">
+    <li id="btn-1" class="nav-item active">
+        <a class="nav-link active">
+            All news
+        </a>
+    </li>
+    <li class="nav-item" id="btn-2">
+        <a class="nav-link">
+            Politics
+        </a>
+    </li>
+    <li class="nav-item" id="btn-3">
+        <a class="nav-link">
+            Business
+        </a>
+    </li>
+    <li class="nav-item" id="btn-4">
+        <a class="nav-link">
+            Sports
+        </a>
+    </li>
+    <li class="nav-item" id="btn-5">
+        <a class="nav-link">
+            Culture
+        </a>
+    </li>
+    <li class="nav-item" id="btn-6">
+        <a class="nav-link">
+            Tech
+        </a>
+    </li>
+    <li class="nav-item" id="btn-7">
+        <a class="nav-link">
+            Travel
+        </a>
+    </li>
+</ul>
+<form class="tab-form active-form" style="width: 100%; position: relative; left: 50px;">
+    <div class="content" id="All news">
+        <div class="row d-flex justify-content-center">
+            @foreach (var item in Model.PopularPosts.Take(2))
+            {
+                <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                    <img src="@item.Photos.First().Patch" style="height: 300px;">
+                    <div class="caption">
+                        <ul class="badge-ul">
+                            <li class="badge-li">
+                                <a class="badge-a" href="#">
+                                    <span class="badge-span">@item.Category.First().Name</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="h4 h4_custom">
+                            <a class="a4_custom" href="#">
+                                @item.Name
+                            </a>
+                        </div>
+                        <div class="under_h4">
+                            <div>
+                                <a class="post-meta-time" href="#">
+                                    <time datetime="2020-06-06">@item.Date</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="devider-dashed"></div>
+                </div>
+            }
+
+        </div>
+        <div class="row d-flex justify-content-center">
+            @foreach (var item in Model.PopularPosts.Skip(2))
+            {
+                <div class="d-flex flex-column col-4 m-3">
+                    <div class="row" style="width: 450px; margin-bottom: 30px;">
+                        <img class="col-7" src="@item.Photos.First().Patch" style="height: 200px;">
+                        <div class="col-5">
+                            <a class="news_name" href="#">
+                                @item.Name
+                            </a>
+                            <br>
+                            <p class="description">
+                                Something about these news
+                            </p>
+                            <div class="under_description">
+                                <div>
+                                    <a class="post-meta-time_desc" href="#">
+                                        <time class="desc-time" datetime="2020-06-06">@item.Date</time>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devider-dashed" style="margin-top: 30px; width: 80%; margin-left: 25px;"></div>
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px;">
+    <div class="content" id="Politics">
+        <div class="row d-flex justify-content-center">
+            <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="devider-dashed"></div>
+            </div>
+            <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="devider-dashed"></div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px; top: 40px;">
+    <div id="Business">
+        <div class="row d-flex justify-content-center">
+            <div class="d-flex flex-column col-4 m-3">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="devider-dashed" style="margin-top: 30px; width: 80%; margin-left: 25px;"></div>
+                </div>
+                <div class="row" style="width: 450px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column col-4 m-3">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="devider-dashed" style="margin-top: 30px; width: 80%;  margin-left: 25px;"></div>
+                </div>
+                <div class="row" style="width: 450px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px; top: 40px;">
+    <div class="content" id="Sports">
+        <div class="row d-flex justify-content-center">
+            <div class="d-flex flex-column col-4 m-3">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column col-4 m-3">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px; top: 40px;">
+    <div class="content" id="Culture">
+        <div class="row d-flex justify-content-center">
+            <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="devider-dashed"></div>
+            </div>
+            <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="devider-dashed"></div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-start">
+            <div class="d-flex flex-column col-4 m-3" style="position: relative; left: 188px;">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="devider-dashed" style="margin-top: 30px; width: 80%; margin-left: 25px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px; top: 40px;">
+    <div class="content" id="Tech">
+        <div class="row d-flex justify-content-center">
+            <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-column col-4" style="position: relative; top: 20px; left: 40px;">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form class="tab-form" style="width: 100%; position: relative; left: 50px; top: 40px;">
+    <div class="content" id="Travel">
+        <div class="row d-flex justify-content-center">
+            <div class="d-flex flex-column col-4" style="position: relative; top: 20px; right: 10px;">
+                <div class="row" style="width: 450px; margin-bottom: 30px;">
+                    <img class="col-7" src="assets/index-01.jpg" style="height: 200px;">
+                    <div class="col-5">
+                        <a class="news_name" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                        <br>
+                        <p class="description">
+                            Something about these news
+                        </p>
+                        <div class="under_description">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-inline-block col-4" style="position: relative; top: 20px; left: 60px;">
+                <img src="assets/index-01.jpg" style="height: 300px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            If Obama Had Governed Like <br> This in 2009, He'd Be the <br> Transformational
+                            President We
+                            Hoped For
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">2h ago</time>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<div class="latest-news">
+    <div class="head-devider">
+        <h2 class="popular_news_head pb-0">
+            Latest News
+        </h2>
+    </div>
+    @foreach (var item in Model.LatestPosts)
+    {
+        <form class="latest-news-content">
+            <div class="unit">
+                <div class="img">
+                    <div class="" style="position: relative; top: 20px;">
+                        <ul class="badge-ul">
+                            <li class="badge-li">
+                                <a class="badge-a" href="#">
+                                    <span class="badge-span">@item.Category.First().Name</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <img class="center" src="@item.Photos.First().Patch" style="width: 150px; margin-bottom: 30px;">
+                    </div>
+                </div>
+
+                <div class="text-block" style="position: relative;">
+                    <a class="news_name" href="#">
+                        @item.Name
+                    </a>
+                    <p class="description" style="width: 500px;">
+                        Something about these news
+                    </p>
+                    <div class="row d-flex flex-row" style="margin-top: 60px; margin-left: 39px;">
+                        <p style="width: max-content; padding:0; color: black; font-family: 'Noto Serif'; font-style: italic; font-size: 17px;">
+                            by
+                        </p>
+                        <a class="person-link" style="width: max-content; padding: 0; padding-left: 5px;">
+                            Someone
+                        </a>
+                        <div class="under_description" style="width: max-content">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">@item.Date</time>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: max-content;">
+                            <a class="post-meta-comment" href="#">
+                                15 comments
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="devider-dashed" style="width: 100%; margin: 35px;"></div>
+        </form>
+    }
+</div>
+<div class="world-news">
+    <div class="head-devider">
+        <h2 class="popular_news_head pb-0">
+            World news
+        </h2>
+    </div>
+    @foreach (var item in Model.WorldPosts.Take(1))
+    {
+        <form class="world-news-content">
+            <div class="unit">
+                <div class="img">
+                    <div class="" style="position: relative; top: 20px;">
+                        <ul class="badge-ul">
+                            <li class="badge-li">
+                                <a class="badge-a" href="#">
+                                    <span class="badge-span">@item.Category.First().Name</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <img class="center" src="@item.Photos.First().Patch" style="width: 400px; margin-bottom: 30px;">
+                    </div>
+                </div>
+                <div class="text-block col-6">
+                    <a class="news_name h4" href="#">
+                        @item.Name
+                    </a>
+                    <div class="row d-flex flex-row" style="margin-top: 30px; margin-left: 3px; width: 70%;">
+                        <p style="width: max-content; padding:0; color: black; font-family: 'Noto Serif'; font-style: italic; font-size: 17px;">
+                            by
+                        </p>
+                        <a class="person-link" style="width: max-content; padding: 0; padding-left: 5px;">
+                            Someone
+                        </a>
+                        <div class="under_description" style="width: max-content; margin-top: 2px; left: 5px;">
+                            <div>
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">@item.Date</time>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: max-content; margin-top: -2px;">
+                            <a class="post-meta-comment" href="#">
+                                15 comments
+                            </a>
+                        </div>
+                    </div>
+                    <p class="description" style="width: 500px; height: auto; word-wrap: break-word;">
+                        Something about these news
+                    </p>
+                    <div class="d-flex flex-row" style="margin-top: 40px; width: 50%;">
+                        <a class="btn btn-warning">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="devider-dashed" style="width: 100%; margin: 35px;"></div>
+            @foreach (var item1 in Model.WorldPosts.Take(2))
+            {
+                <div class="row">
+                    <div class="col-6">
+                        <div class="unit">
+                            <div class="img">
+                                <div class="" style="position: relative; top: 20px;">
+                                    <img class="center" src="@item1.Photos.First().Patch"
+                                         style="width: 160px; margin-bottom: 30px;">
+                                </div>
+                            </div>
+                            <div class="text-block col-8">
+                                <a class="news_name h4" href="#" style="font-size: 27px;">
+                                    @item1.Name
+                                </a>
+                                <div class="row d-flex flex-row" style="margin-top: 15px; margin-left: -15px; width: 70%;">
+                                    <div class="under_description" style="width: max-content; margin-top: 2px; left: 5px;">
+                                        <div>
+                                            <a class="post-meta-time_desc" href="#">
+                                                <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div style="width: max-content; margin-top: -2px;">
+                                        <a class="post-meta-comment" href="#">
+                                            15 comments
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devider-dashed" style="width: 95%; margin: 35px;"></div>
+                    </div>
+
+                </div>
+            }
+        </form>
+    }
+</div>
+@*
+<div class="col-6">
+		<div class="unit">
+			<div class="img">
+				<div class="" style="position: relative; top: 20px;">
+					<img class="center" src="assets/index-01.jpg"
+						 style="width: 160px; margin-bottom: 30px;">
+				</div>
+			</div>
+			<div class="text-block col-8">
+				<a class="news_name h4" href="#" style="font-size: 27px;">
+					if obama had governed like...
+				</a>
+				<div class="row d-flex flex-row" style="margin-top: 15px; margin-left: -15px; width: 70%;">
+					<div class="under_description" style="width: max-content; margin-top: 2px; left: 5px;">
+						<div>
+							<a class="post-meta-time_desc" href="#">
+								<time class="desc-time" datetime="2020-06-06">2h ago</time>
+							</a>
+						</div>
+					</div>
+					<div style="width: max-content; margin-top: -2px;">
+						<a class="post-meta-comment" href="#">
+							15 comments
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="devider-dashed" style="width: 95%; margin: 35px;"></div>
+	</div>*@
