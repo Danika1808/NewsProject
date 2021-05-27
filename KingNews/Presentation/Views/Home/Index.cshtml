@@ -4,7 +4,6 @@
 
 @model IndexViewModel
 
-@await Component.InvokeAsync("PopularPosts") 
 <div class="first-five row w-100">
     <div class="big-one col-6">
         <img src="@Model.ActualPosts.First().Photos.First().Patch" style="width: 700px;">
@@ -33,144 +32,33 @@
     <div class="lil-news-columns">
         @foreach (var item in Model.ActualPosts.Skip(1))
         {
-            <div class="d-inline-block col-6">
-
-                <div>
-                    <img src="@item.Photos.First().Patch" style="height: 250px;">
-                    <div class="caption">
-                        <ul class="badge-ul">
-                            <li class="badge-li">
-                                <a class="badge-a" href="#">
-                                    <span class="badge-span">@item.Category.First().Name</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="h4 h4_custom">
-                            <a class="a4_custom" href="#">
-                                @item.Name
+            <div>
+                <img src="@item.Photos.First().Patch" style="height: 250px;">
+                <div class="caption">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">@item.Category.First().Name</span>
                             </a>
-                        </div>
-                        <div class="under_h4">
-                            <div>
-                                <a class="post-meta-time" href="#">
-                                    <time datetime="2020-06-06">@item.Date</time>
-                                </a>
-                            </div>
+                        </li>
+                    </ul>
+                    <div class="h4 h4_custom">
+                        <a class="a4_custom" href="#">
+                            @item.Name
+                        </a>
+                    </div>
+                    <div class="under_h4">
+                        <div>
+                            <a class="post-meta-time" href="#">
+                                <time datetime="2020-06-06">@item.Date</time>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         }
     </div>
-    <div class="popular-news">
-        <div class="head-devider">
-            <h2 class="popular_news_head pb-0">
-                Popular News
-            </h2>
-        </div>
-        <ul class="nav-tabs nav custom_nav">
-            <li id="btn-1" class="nav-item active">
-                <a class="nav-link active">
-                    All news
-                </a>
-            </li>
-            <li class="nav-item" id="btn-2">
-                <a class="nav-link">
-                    Politics
-                </a>
-            </li>
-            <li class="nav-item" id="btn-3">
-                <a class="nav-link">
-                    Business
-                </a>
-            </li>
-            <li class="nav-item" id="btn-4">
-                <a class="nav-link">
-                    Sports
-                </a>
-            </li>
-            <li class="nav-item" id="btn-5">
-                <a class="nav-link">
-                    Culture
-                </a>
-            </li>
-            <li class="nav-item" id="btn-6">
-                <a class="nav-link">
-                    Tech
-                </a>
-            </li>
-            <li class="nav-item" id="btn-7">
-                <a class="nav-link">
-                    Travel
-                </a>
-            </li>
-        </ul>
-        <form class="tab-form active-form" style="width: 100%; position: relative; left: 50px;">
-            <div class="content" id="All news">
-                <div class="row d-flex justify-content-center">
-                    @foreach (var item in Model.PopularPosts.Take(2))
-                    {
-                        <div class="d-inline-block col-4" style="position: relative; top: 20px;">
-                            <img src="@item.Photos.First().Patch" style="height: 300px;">
-                            <div class="caption">
-                                <ul class="badge-ul">
-                                    <li class="badge-li">
-                                        <a class="badge-a" href="#">
-                                            <span class="badge-span">@item.Category.First().Name</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="h4 h4_custom">
-                                    <a class="a4_custom" href="#">
-                                        @item.Name
-                                    </a>
-                                </div>
-                                <div class="under_h4">
-                                    <div>
-                                        <a class="post-meta-time" href="#">
-                                            <time datetime="2020-06-06">@item.Date</time>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="devider-dashed"></div>
-                        </div>
-                    }
-
-                </div>
-                <div class="row d-flex justify-content-center">
-                    @foreach (var item in Model.PopularPosts.Skip(2))
-                    {
-                        <div class="d-flex flex-column col-4 m-3">
-                            <div class="row" style="width: 450px; margin-bottom: 30px;">
-                                <img class="col-7" src="@item.Photos.First().Patch" style="height: 200px;">
-                                <div class="col-5">
-                                    <a class="news_name" href="#">
-                                        @item.Name
-                                    </a>
-                                    <br>
-                                    <p class="description">
-                                        @item.Content.Substring(0, item.Content.IndexOf('.') + 1)
-
-                                    </p>
-                                    <div class="under_description">
-                                        <div>
-                                            <a class="post-meta-time_desc" href="#">
-                                                <time class="desc-time" datetime="2020-06-06">@item.Date</time>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="devider-dashed" style="margin-top: 30px; width: 80%; margin-left: 25px;"></div>
-                            </div>
-
-                        </div>
-                    }
-
-                </div>
-            </div>
-        </form>
-    </div>
+    @await Component.InvokeAsync("PopularPosts")
     <div class="latest-news">
         <div class="head-devider">
             <h2 class="popular_news_head pb-0">
