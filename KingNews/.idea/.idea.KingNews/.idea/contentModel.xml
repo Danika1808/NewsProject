@@ -14,6 +14,9 @@
             </e>
           </e>
         </e>
+        <e p="Services" t="Include">
+          <e p="EmailSenderService.cs" t="Include" />
+        </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -46,13 +49,10 @@
         <e p="Context" t="Include">
           <e p="AppDbContext.cs" t="Include" />
         </e>
-        <e p="DbContextFactory.cs" t="Include" />
         <e p="Infrastructure.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20210526125500_InitialCreate.cs" t="Include" />
-          <e p="20210526125500_InitialCreate.Designer.cs" t="Include" />
-          <e p="20210526144855_UpdateComment.cs" t="Include" />
-          <e p="20210526144855_UpdateComment.Designer.cs" t="Include" />
+          <e p="20210526150413_InitialCreate.cs" t="Include" />
+          <e p="20210526150413_InitialCreate.Designer.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -61,10 +61,6 @@
               <e p="Infrastructure.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="Repository" t="Include">
-          <e p="IRepository.cs" t="Include" />
-          <e p="Repository.cs" t="Include" />
         </e>
         <e p="ServiceCollectionExtensions.cs" t="Include" />
       </e>
@@ -76,9 +72,11 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="IndexViewModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -125,6 +123,7 @@
         </e>
         <e p="wwwroot" t="Include">
           <e p="assets" t="Include">
+            <e p="1733635482_0_0_2879_1919_1440x900_80_0_1_b724c64b6996bb8dc40f5c3a69464491.jpg.webp" t="Include" />
             <e p="index-01.jpg" t="Include" />
             <e p="logo-footer.png" t="Include" />
             <e p="logo.png" t="Include" />

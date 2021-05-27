@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22d0b245-c9c5-497c-a15b-b2e677afe357" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Domain/Models/News/Post.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/News/Post.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Domain/Models/News/Post.cs" />
+        <option value="$PROJECT_DIR$/Application/Services/EmailSenderService.cs" />
       </list>
     </option>
   </component>
@@ -93,13 +97,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622040711071</updated>
       <workItem from="1622040727251" duration="107000" />
+      <workItem from="1622066714579" duration="1015000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -111,8 +116,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Application/Services/EmailSenderService.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\danik\OneDrive\Documents\GIthub\NewsProject\KingNews\Application\Services\EmailSenderService.cs" initialLine="22">
+            <startOffsets>
+              <option value="648" />
+            </startOffsets>
+            <endOffsets>
+              <option value="714" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
