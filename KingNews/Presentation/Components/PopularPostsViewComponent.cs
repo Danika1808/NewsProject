@@ -20,19 +20,28 @@ namespace Presentation.Components
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var popularPosts = _context.Posts
-                .Include(x => x.Category)
-                .ToList()
-                .GroupBy(x => x.Category.First().Name)
-                .ToDictionary(x => x.Key, x => x.OrderByDescending(y => y.Rating).Take(6).ToList());
+            var dict = new Dictionary<string, List<Post>>
+            {
+                {
+                    "All News",
+                    await _context.Posts
 
-            popularPosts("All", await _context.Posts
-                .Include(x => x.Category)
                 .OrderByDescending(x => x.Rating)
                 .Take(6)
-                .ToListAsync());
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .ToListAsync()
+                }
+            }
+            .Concat(_context.Posts
+                .Include(x => x.Category)
+                .Include(x => x.Photos)
+                .ToList()
+                .GroupBy(x => x.Category.First().Name)
+                .ToDictionary(x => x.Key, x => x.OrderByDescending(y => y.Rating).Take(6).ToList())).ToDictionary(x => x.Key, x => x.Value); ;
 
-            return View(popularPosts);
+
+            return View(dict);
         }
     }
 }
