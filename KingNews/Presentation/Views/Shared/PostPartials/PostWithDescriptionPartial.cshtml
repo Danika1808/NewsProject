@@ -1,0 +1,22 @@
+﻿@using Domain.Models.News
+
+@model Post
+
+<img class="col-7" src="@Model.Photos.First().Patch" style="height: 200px;">
+<div class="col-5">
+    <a class="news_name" href="#">
+        @Model.Name
+    </a>
+    <br>
+    <p class="description">
+        @Model.Content.Substring(0, Model.Content.IndexOf('.') + 1)
+
+    </p>
+    <div class="under_description">
+        <div>
+            <a class="post-meta-time_desc" href="#">
+                <time class="desc-time" datetime="2020-06-06">@Model.Date</time>
+            </a>
+        </div>
+    </div>
+</div>

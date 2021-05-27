@@ -1,0 +1,41 @@
+﻿@using Domain.Models.News
+
+@model Post
+
+<div class="unit">
+    <div class="img">
+        <div class="" style="position: relative; top: 20px;">
+            <ul class="badge-ul">
+                <li class="badge-li">
+                    <a class="badge-a" href="#">
+                        <span class="badge-span">@Model.Category.First().Name</span>
+                    </a>
+                </li>
+            </ul>
+            <img class="center" src="@Model.Photos.First().Patch" style="width: 400px; margin-bottom: 30px;">
+        </div>
+    </div>
+    <div class="text-block col-6">
+        <a class="news_name h4" href="#">
+            @Model.Name
+        </a>
+        <div class="row d-flex flex-row" style="margin-top: 30px; margin-left: 3px; width: 70%;">
+            <p style="width: max-content; padding:0; color: black; font-family: 'Noto Serif'; font-style: italic; font-size: 17px;">
+                <div class="under_description" style="width: max-content; margin-top: 2px; left: 5px;">
+                    <div>
+                        <a class="post-meta-time_desc" href="#">
+                            <time class="desc-time" datetime="2020-06-06">@Model.Date</time>
+                        </a>
+                    </div>
+                </div>
+                <div style="width: max-content; margin-top: -2px;">
+                    <a class="post-meta-comment" href="#">
+                        @Model.Comments.Count
+                    </a>
+                </div>
+        </div>
+        <p class="description" style="width: 500px; height: auto; word-wrap: break-word;">
+            @Model.Content.Substring(0, Model.Content.IndexOf('.') + 1)
+        </p>
+    </div>
+</div>

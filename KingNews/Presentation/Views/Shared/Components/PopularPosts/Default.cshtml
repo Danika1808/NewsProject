@@ -35,13 +35,13 @@
             @if (item.Key.Equals("All News"))
             {
                 <div class="content" id="@item.Key" style="visibility: visible">
-                    @await Html.PartialAsync("PopularPostPartial", item)
+                    @await Html.PartialAsync(@"PostPartials/PopularPostPartial", item)
                 </div>
             }
             else
             {
                 <div class="content" id="@item.Key" style="visibility: hidden">
-                    @await Html.PartialAsync("PopularPostPartial", item)
+                    @await Html.PartialAsync(@"PostPartials/PopularPostPartial", item)
                 </div>
             }
         }

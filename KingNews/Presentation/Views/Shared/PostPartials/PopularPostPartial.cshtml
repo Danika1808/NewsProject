@@ -1,0 +1,19 @@
+﻿@using Domain.Models.News
+
+@model KeyValuePair<string, List<Post>>
+
+
+<div class="row d-flex justify-content-center">
+    @foreach (var post in Model.Value.Take(2))
+    {
+        <div class="d-inline-block col-4" style="position: relative; top: 20px;">
+            @await Html.PartialAsync(@"PostPartials/PostPartial", post)
+        </div>
+    }
+    @foreach (var post in Model.Value.Skip(2))
+    {
+        <div class="row" style="width: 450px; margin-bottom: 30px;">
+            @await Html.PartialAsync(@"PostPartials/PostWithDescriptionPartial", post)
+        </div>
+    }
+</div>
