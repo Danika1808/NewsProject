@@ -34,11 +34,11 @@ namespace Presentation.Controllers
                 .Include(x => x.Photos)
                 .ToList();
 
-            var popularPosts = _context.Posts
+            var popularPosts = _context.Posts  
                 .OrderByDescending(x => x.Rating)
                 .Include(x => x.Category)
                 .Include(x => x.Photos)
-                .Take(5).ToList();
+                .Take(6).ToList();
 
             var latestPosts = _context.Posts
                 .OrderByDescending(x => x.Date)
