@@ -4,8 +4,8 @@
 }
 
 body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    width: max-content;
+    font-family: "Noto Sans", serif!important;
+    
 }
 
 .date {
@@ -74,7 +74,7 @@ li:hover {
     background: blue;
 }
 
-a::after {
+a::after > .icon-reply a:before {
     content: "";
     height: 20px;
     width: 20px;
@@ -136,8 +136,8 @@ a::after {
 }
 
 .h1_custom {
-    position: absolute;
-    bottom: 49px;
+    position: relative;
+    bottom: -35px;
     width: 700px;
     height: 300px;
     padding: 0 20px;
@@ -153,10 +153,18 @@ a::after {
 }
 
 .h4_custom {
-    position: absolute;
-    top: 100px;
-    width: 325px;
-    height: 100px;
+    position: relative;
+  
+    width: 375px;
+    height: 135px;
+    padding: 10px;
+}
+
+.h4_custom {
+    position: relative;
+    bottom: 50px;
+    width: 375px;
+    height: 135px;
     padding: 10px;
 }
 
@@ -178,9 +186,16 @@ a::after {
 }
 .under_h4 {
     position: relative;
-    top: -60px;
+    bottom: 100px ;
     left: 14px;
 }
+
+.under_h1 {
+    position: relative;
+    bottom: 20px;
+    left: 14px;
+}
+
 .post-meta-time{
     color: white;
     text-decoration: none;
@@ -749,9 +764,261 @@ textarea.form-input {
     transition: 0.2s ease-out;
 }
 
+.caption {
+    position: absolute;
+    top: 200px;
+}
+
+.text-left {
+    margin-left: -30px;
+}
+
+.offset-top-12 {
+    margin-top: 17px;
+}
+
+.h1 {
+    line-height: 1.26;
+    font-size: 50px;
+    font-weight: 700!important;
+    font-family: "Noto Sans", serif;
+}
+
+p {
+    font-family: "Noto Sans", serif;
+    font-weight: 300!important;
+    text-align: left!important;
+    font-size: 16px;
+}
+
+.post-comment-classic {
+    margin-top: 15px;
+}
+
+.bg-black {
+    background: #000;
+    fill: #000;
+}
+
+.posts-comment-inset {
+    padding: 30px;
+}
+
+.context-dark {
+    color: #fff;
+}
+
+.unit {
+    display: flex;
+    flex: 0 1 100%;
+    margin-bottom: -30px;
+    margin-left: -20px;
+}
+.unit-left {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.unit > * {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.max-width-none {
+    max-width: none;
+}
+
+img.post-image.max-width-none {
+    width: 150px;
+}
+
+.unit-body {
+    flex: 0 1 auto;
+}
+
+.post-comment-classic h3 {
+    font-weight: 400;
+}
+
+.post-comment-classic a {
+    color: #02afff!important;
+    text-decoration: none!important;
+    transition: .3s all ease!important;
+}
+
+h3.heading-italic + p {
+    margin-top: 8px;
+}
 @font-face {
     font-family: "MaterialsIcon";
     src: url(fonts/MaterialIcons-Regular.woff2) format("woff2");
+}
+
+.post-devider {
+    margin-top: 60px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 0;
+    border-top: 2px solid #000!important;
+}
+
+.row-20 {
+    margin-bottom: -20px;
+}
+
+* + .row {
+    margin-top: 30px;
+}
+
+.inset-left-30 {
+    padding-left: 30px;
+}
+
+.font-accent {
+    font-family: 'Noto Serif', serif;
+    
+}
+
+.font-italic {
+    font-style: italic!important;
+}
+
+.small  {
+    font-weight: 400!important;
+    font-size: 14px!important;
+}
+
+.post-prev, .post-next {
+    position: relative;
+}
+
+.link-black {
+    color: #000;
+    text-decoration: none;
+    
+}
+
+.link-black:hover {
+    color: #02afff;
+    transition: .2s ease-in;
+
+}
+
+.text-md-left {
+    text-align: left!important;
+}
+
+.text-md-right {
+    text-align: left!important;
+}
+
+.post-prev a:before, .post-next a:before{
+    position: absolute;
+    top: 2px;
+    font-family: 'MaterialsIcon';
+    font-weight: 400;
+    font-size: 40px;
+    color: #999999;
+}
+
+.post-prev a:hover:before {
+    color: #02afff;
+    transition: .2s ease-in;
+}
+.post-prev a:before {
+    content: '\e5cb';
+    left: -45px;
+}
+
+.post-next a:before {
+    content: '\e5cc';
+    right: -20px;
+}
+
+.post-next a:hover:before {
+    color: #02afff;
+    transition: .2s ease-in;
+}
+
+.heading-devider h3:after {
+    top: 65px;
+    left: 100%;
+    width: 615px;
+    height: 1px;
+    content: '';
+    position: absolute;
+    display:inline-block;
+    background: #000;
+}
+
+.list-inline-md {
+    margin-left: -15px;
+    margin-right: -15px;
+    transform: translate3d(0, -8px, 0);
+    margin-bottom: -25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.col-sm-8 {
+    position: relative!important;
+    width: 100%!important;
+    padding-right: 15px!important;
+    padding-left: 15px!important;
+}
+
+.icon-reply:before {
+    content: '\e15e';
+    font-family: 'MaterialsIcon';
+    font-size: 20px;
+    font-style: normal;
+    color: #999999;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.list-inline-md > li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.comment a {
+    text-decoration: none;
+}
+
+.comment p {
+    font-weight: 300;
+    font-size: 16px;
+}
+.list-inline-md {
+    padding: 0!important;
+}
+.text-right {
+    text-align: right!important;
+}
+
+.comment a {
+    font-size: 16px;
+    line-height: 1.85714;
+    font-weight: 400;
+    color: #02afff;
+    
+}
+
+.comment li {
+    font-size: 16px;
+}
+
+.unit-comment > * {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.comment .unit {
+    text-align: left;
+    align-items: flex-start;
 }
 
 @font-face {
@@ -765,4 +1032,47 @@ textarea.form-input {
     url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg") format("svg");
     font-weight: normal;
     font-style: normal;
+}
+
+@media screen and (min-width: 780px){
+    .h1 {
+        line-height: 1.26 !important;
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (min-width: 780px){
+    h3 {
+        line-height: 1.26 !important;
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    html .offset-sm-top-20 {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 780px){
+    .h5 {
+        line-height: 1.3!important;
+        font-size: 20px!important;
+        font-weight: 700!important;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+    }
+    
+    .col-sm-8 {
+        flex: 0 0 66.66667% !important;
+        max-width: 66.66667%!important;
+    }
+    
+    .col-sm-2 {
+        flex: 0 0 16.66667%!important;
+        max-width: 16.66667%!important;
+    }
 }
