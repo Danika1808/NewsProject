@@ -19,10 +19,87 @@ $(document).ready(function() {
     });
     
 });
+
 $(document).ready(function() {
     $("#contact-name").blur(function() {
         if(!$(this).val()) {
             $("#contact-name-label").removeClass("focus");
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+    });
+});
+
+$(document).ready(function() {
+    $("#phone").on("focus", function () {
+        $("#phone-label").addClass("focus");
+        $(this).removeClass("invalid");
+    });
+
+});
+
+$(document).ready(function() {
+    $("#phone").blur(function() {
+        if(!$(this).val()) {
+            $("#phone-label").removeClass("focus");
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+    });
+});
+
+$(document).ready(function() {
+    $("#contact-lastname").on("focus", function () {
+        $("#contact-lastname-label").addClass("focus");
+        $(this).removeClass("invalid");
+    });
+
+});
+
+$(document).ready(function() {
+    $("#contact-lastname").blur(function() {
+        if(!$(this).val()) {
+            $("#contact-lastname-label").removeClass("focus");
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+    });
+});
+
+$(document).ready(function() {
+    $("#your-password").on("focus", function () {
+        $("#your-password-label").addClass("focus");
+        $(this).removeClass("invalid");
+    });
+
+});
+
+$(document).ready(function() {
+    $("#your-password").blur(function() {
+        if(!$(this).val()) {
+            $("#your-password-label").removeClass("focus");
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+    });
+});
+
+$(document).ready(function() {
+    $("#your-password-confirm").on("focus", function () {
+        $("#your-password-confirm-label").addClass("focus");
+        $(this).removeClass("invalid");
+    });
+
+});
+
+$(document).ready(function() {
+    $("#your-password-confirm").blur(function() {
+        if(!$(this).val()) {
+            $("#your-password-confirm-label").removeClass("focus");
             $(this).addClass("invalid");
         } else {
             $(this).removeClass("invalid");
@@ -37,6 +114,7 @@ $(document).ready(function() {
     });
 
 });
+
 $(document).ready(function() {
     $("#contact-email").blur(function() {
         if(!$(this).val()) {
@@ -55,6 +133,7 @@ $(document).ready(function() {
     });
 
 });
+
 $(document).ready(function() {
     $("#your-website").blur(function() {
         if(!$(this).val()) {
@@ -73,6 +152,7 @@ $(document).ready(function() {
     });
 
 });
+
 $(document).ready(function() {
     $("#message").blur(function() {
         if(!$(this).val()) {
@@ -83,6 +163,8 @@ $(document).ready(function() {
         }
     });
 });
+
+
 
 $(document).ready(function () {
    $(".carousel-control-prev").click(function () {
