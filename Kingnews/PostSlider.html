@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>PostSlider</title>
+
+</head>
+<body>
+<header>
+    <div class="flex-row mt-5">
+        <span class="date m-lg-5">
+            <span>Fri</span>
+            .
+            <span>Febraury</span>
+            <span>26</span>
+            ,
+            <span>2021</span>
+        </span>
+        <div class="nav-right mx-5">
+            <div class="nav-search">
+                <form method="get">
+                    <div class="px-4">
+                        <!-- --<label class="form-label" for='search'>I'm looking for...</label> -->
+                        <input class="form-input" type="text" id="search" placeholder="I'm looking for..." name="bruh">
+                    </div>
+                </form>
+                <img src="assets/search.png"
+                     style="width: 40px; position: relative; top: -34px; left: 155px; filter: contrast(10%);">
+            </div>
+            <div style="width: 1px; height: 30px; background:#efefef; position: relative; top: -5px; left: 10px; ;"></div>
+            <ul class="ul_links">
+                <li class="px-4">
+                    <a>Login</a>
+                </li>
+                <li>
+                    <a>Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="background:#efefef; height: 1px; width: 1350px; position: relative; top: 16px; left: 45px;"></div>
+    <div class="logo m-5    ">
+        <img src="assets/logo.png">
+    </div>
+    <div style="background:#efefef; height: 1px; width: 1350px; position: relative;  left: 45px;"></div>
+    <div class="main-nav-bar" style="position: relative; top: 25px;">
+        <ul class="main-nav">
+            <li class="px under ">
+                <a class="active">Home</a>
+
+            </li>
+            <li class="px">
+                <a>Politics</a>
+            </li>
+            <li class="px">
+                <a>Business</a>
+            </li>
+            <li class="px">
+                <a>Sports</a>
+            </li>
+            <li class="px">
+                <a>Culture</a>
+            </li>
+            <li class="px">
+                <a>Tech</a>
+            </li>
+            <li class="px">
+                <a>World</a>
+            </li>
+            <li class="px">
+                <a>About</a>
+            </li>
+            <li class="px">
+                <a>Contacts</a>
+            </li>
+        </ul>
+        <div class="social-list">
+
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container-wide col-xl-8 d-flex m-5 p-lg-5">
+        <div class="col-xl-11" style="position: relative;">
+            <div class="post-default">
+                <div class="text-left">
+                    <ul class="badge-ul">
+                        <li class="badge-li">
+                            <a class="badge-a" href="#">
+                                <span class="badge-span">News</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="offset-top-12" style="padding-top: 40px;">
+                    <div class="h1 text-black">
+                        If Obama Had Ruled Like This in 2009, He'd Be the Reforming President We All Hoped For
+                    </div>
+                    <div class="row d-flex flex-row" style=" margin-left: 5px;">
+                        <p style="width: max-content; padding:0; color: black; font-family: 'Noto Serif'; font-style: italic; font-size: 17px;">
+                            by
+                        </p>
+                        <a class="person-link" style="width: max-content; padding: 0; padding-left: 5px;">
+                            Someone
+                        </a>
+                        <div class="under_description" style="width: max-content">
+                            <div style="position: relative; top: 3px;">
+                                <a class="post-meta-time_desc" href="#">
+                                    <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: max-content;">
+                            <a class="post-meta-comment" href="#">
+                                15 comments
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/index-01.jpg" alt="first-slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/index-01.jpg" alt="second-slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/categories-list-03.jpg" alt="third-slide">
+                        </div>
+                        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                           
+                        </a>
+                        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            
+                        </a>
+                    </div>
+                </div>
+                <p style="margin: 0; width: 800px; display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px;margin-inline-end: 0px;">
+                    Even GOPers were approving of the path POTUS has undertaken then...at least of the rhetorics style,
+                    which he so Hollywood-esquely told it in.
+                    When people tell me that our President has delivered his 7th State of the Union speech recently, I
+                    always correct their mistake and tell it was eighth, in fact. On February 24, 2009, the start of
+                    Barack Obama’s 2nd month in office, he made an extensive speech on then ongoing Great Recession
+                    crisis. He tried to show what his personal vision for a path out was and why it was aligned with a
+                    <span class="text-medium">$787 billion stimulus law that was passed that same day.</span>
+                    Also, Mr. President talked foreign politics on that same occasion. He explained how well he will
+                    succeed in using diplomacy instead of Bush's warmongering, strengthen old alliances and, all in all,
+                    spruce up US international image to a better one. He said:
+                    <span class="font-italic font-weight-regular">"living our values doesn’t make us weaker, it makes us safer and it makes us stronger."</span>
+                    "living our values doesn’t make us weaker, it makes us safer and it makes us stronger."
+                    <span class="font-italic font-weight-regular">"living our values doesn’t make us weaker, it makes us safer and it makes us stronger."</span>
+                </p>
+                <div class="bg-black context-dark posts-comment-inset post-comment-classic">
+                    <div class="unit flex-md-row flex-lg-row flex-xl-row flex-xxl-row">
+                        <div class="unit-left">
+                            <img class="post-image max-width-none" src="assets/index-01.jpg" width="150" height="150">
+                        </div>
+                        <div class="unit-body">
+                            <h3 class="heading-italic font-weight-regular offset-sm-top-20">
+                                Writen By
+                                <a href="PoliticsPage.html">Brian Williamson</a>
+                            </h3>
+                            <p>
+                                Our online newspaper delivers breaking news for more than 20 years, both in a printed
+                                version and here in our online magazine
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="post-devider">
+                <div class="row justify-content-md-between row-20 ">
+                    <div class="col-md-6 col col-xxl-4 text-md-left">
+                        <div class="inset-left-30">
+                            <div class="font-accent small font-italic">Previos Post</div>
+                            <div class="post-prev h5 offset-top-5">
+                                <a class="link-black" href="#">
+                                    Bradley Cooper’s "Twin" Causes Madness At Sundance Film Festival Opening
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col col-xxl-4 text-md-right">
+                        <div class="inset-right-30">
+                            <div class="font-accent small font-italic">Previos Post</div>
+                            <div class="post-next h5 offset-top-5">
+                                <a class="link-black" href="#">
+                                    Michelle Obama Bags on the President, Says he was a bum
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="heading-devider" id="comments" style="width: max-content; position: relative;">
+                    <h3 class="heading-italic font-weight-regular" style="width: max-content">
+                        3 Response
+                    </h3>
+                </div>
+                <div class="comment text-md-left">
+                    <div class="unit-comment unit flex-md-row flex-lg-row flex-xl-row flex-xxl-row">
+                        <div class="unit-left">
+                            <img class="max-width-none" src="assets/index-01.jpg" width="100px" height="100px">
+                        </div>
+                        <div class="unit-body">
+                            <div class="row justify-content-sm-between text-sm-left">
+                                <div class="col-sm-8">
+                                    <ul class="list-inline-md font-accent small font-italic fon">
+                                        <li>
+                                            by
+                                            <a href="#">Someone</a>
+                                        </li>
+                                        <li>
+                                        <span class="post-meta-time_desc" href="#">
+                                            <time class="desc-time" datetime="2020-06-06">2h ago</time>
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                    <a class="icon-reply" href="#">
+                                    </a>
+                                </div>
+                            </div>
+                            <p>
+                                I cannot agree more, as my brother went on to become a volunteer in Syria, fighting alongside Syrian moderate opposition versus Assad - and died. All because US did not stop Assad in 2011-2012.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="post-devider">
+                <div class="heading-devider" style="width: max-content; position: relative;">
+                    <h3 class="heading-italic font-weight-regular" style="width: max-content">
+                        Leave a reply
+                    </h3>
+                </div>
+                <div class="" style="position: relative;">
+                    <p class="font-weight-regular">
+                        Your email address will not be published. Required fields are marked
+                        <span class="text-primary">*</span>
+                    </p>
+                    <div class="rd-mailform rd-mailform-gray-light-skin" method="post" novalidate="novalidate">
+                        <div class="form-wrap">
+                            <label class="form-label rd-input-label" for="contact-name" id="contact-name-label">Your name *</label>
+                            <input class="form-input form-control-has-validation form-control-last-child" required id="contact-name" type="text" name="name">
+                        </div>
+                        <div class="form-wrap">
+                            <label class="form-label rd-input-label" for="contact-email" id="contact-email-label">E-Mail *</label>
+                            <input class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="email">
+                        </div>
+                        <div class="form-wrap">
+                            <label class="form-label rd-input-label" for="your-website" id="your-website-label">Your Website *</label>
+                            <input class="form-input form-control-has-validation form-control-last-child" id="your-website" type="text" name="website">
+                        </div>
+                        <div class="form-wrap">
+                            <label class="form-label rd-input-label" for="message" id="message-label">Your Website *</label>
+                            <textarea class="form-input form-control-has-validation form-control-last-child" id="message" type="text" name="message"></textarea>
+                        </div>
+                        <div class="text-lg-left form-wrap form-button">
+                            <button class="btn btn-warning">Submit comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <div class="head-devider">
+        <div class="devider"></div>
+    </div>
+    <div class="row">
+        <div class=" footer-row col-lg-6 text-center d-flex align-items-center">
+            <a class="brand">
+                <img src="assets/logo-footer.png" alt width="235" height="72">
+            </a>
+            <p class="rights">
+                <span>©</span>
+                <span>2021</span>
+                <span> </span>
+                <span>News King, Inc.</span>
+                <span>  </span>
+                <a class="privacy-link" href="#">Privacy Police</a>
+            </p>
+        </div>
+        <div class="col-lg-5 order-lg-1 text-center text-lg-end">
+            <ul class="list-inline-0">
+                <li>
+                    <a class="icon icon-circle icon-default facebook-before" htef="#"></a>
+                </li>
+                <li>
+                    <a class="icon icon-circle icon-default instagram-before" htef="#"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<a href="#" id="ui-to-top" class="ui-to-top material-icons">
+
+</a>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+</body>
+</html>
