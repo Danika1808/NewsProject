@@ -25,8 +25,10 @@
     <list default="true" id="22d0b245-c9c5-497c-a15b-b2e677afe357" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingNews/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Presentation/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/Models/News/Post.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Models/News/Post.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Views/Shared/PostPartials/PostPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Views/Shared/PostPartials/PostPartial.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,7 @@
       <list>
         <option value="$PROJECT_DIR$/Domain/Models/News/Post.cs" />
         <option value="$PROJECT_DIR$/Application/Services/EmailSenderService.cs" />
+        <option value="$PROJECT_DIR$/Presentation/Controllers/HomeController.cs" />
       </list>
     </option>
   </component>
@@ -98,6 +101,7 @@
       <updated>1622040711071</updated>
       <workItem from="1622040727251" duration="107000" />
       <workItem from="1622066714579" duration="1015000" />
+      <workItem from="1622758206529" duration="619000" />
     </task>
     <servers />
   </component>

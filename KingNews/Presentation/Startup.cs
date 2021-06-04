@@ -19,7 +19,10 @@ namespace Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
             services.AddEfRepositories(Configuration.GetConnectionString("dbConnectionString"));
         }
 
@@ -37,6 +40,8 @@ namespace Presentation
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();

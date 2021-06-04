@@ -22,7 +22,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
-        <e p="DTO" t="Include" />
+        <e p="DTO" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="Comment.cs" t="Include" />
+          <e p="Photo.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserProfile.cs" t="Include" />
+        </e>
         <e p="Mapping" t="Include" />
         <e p="Models" t="Include">
           <e p="Identity" t="Include">
@@ -53,6 +60,8 @@
         <e p="Migrations" t="Include">
           <e p="20210526150413_InitialCreate.cs" t="Include" />
           <e p="20210526150413_InitialCreate.Designer.cs" t="Include" />
+          <e p="20210527005614_UpdatePost.cs" t="Include" />
+          <e p="20210527005614_UpdatePost.Designer.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -70,13 +79,22 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Components" t="Include">
+          <e p="CategoriesViewComponent.cs" t="Include" />
+          <e p="PopularPostsViewComponent.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
+        <e p="Extentions" t="Include">
+          <e p="UserManagerExtentions.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="IndexViewModel.cs" t="Include" />
+          <e p="LoginModel.cs" t="Include" />
+          <e p="RegisterModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -84,20 +102,6 @@
               <e p="Presentation.AssemblyInfo.cs" t="Include" />
               <e p="Presentation.RazorAssemblyInfo.cs" t="Include" />
             </e>
-          </e>
-        </e>
-        <e p="Pages" t="Include">
-          <e p="_ViewImports.cshtml" t="Include" />
-          <e p="_ViewStart.cshtml" t="Include" />
-          <e p="Error.cshtml" t="Include" />
-          <e p="Error.cshtml.cs" t="Include" />
-          <e p="Index.cshtml" t="Include" />
-          <e p="Index.cshtml.cs" t="Include" />
-          <e p="Privacy.cshtml" t="Include" />
-          <e p="Privacy.cshtml.cs" t="Include" />
-          <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
-            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
         </e>
         <e p="Presentation.csproj" t="IncludeRecursive" />
@@ -118,7 +122,21 @@
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Components" t="Include">
+              <e p="Categories" t="Include">
+                <e p="Default.cshtml" t="Include" />
+              </e>
+              <e p="PopularPosts" t="Include">
+                <e p="Default.cshtml" t="Include" />
+              </e>
+            </e>
             <e p="Error.cshtml" t="Include" />
+            <e p="PostPartials" t="Include">
+              <e p="PopularPostPartial.cshtml" t="Include" />
+              <e p="PostPartial.cshtml" t="Include" />
+              <e p="PostWithDescriptionAndCommentPartial.cshtml" t="Include" />
+              <e p="PostWithDescriptionPartial.cshtml" t="Include" />
+            </e>
           </e>
         </e>
         <e p="wwwroot" t="Include">
@@ -127,6 +145,27 @@
             <e p="index-01.jpg" t="Include" />
             <e p="logo-footer.png" t="Include" />
             <e p="logo.png" t="Include" />
+            <e p="News1.webp" t="Include" />
+            <e p="News10.webp" t="Include" />
+            <e p="News11.webp" t="Include" />
+            <e p="News12.jpg" t="Include" />
+            <e p="News13.webp" t="Include" />
+            <e p="News14.png" t="Include" />
+            <e p="News15.jpg" t="Include" />
+            <e p="News16.jpg" t="Include" />
+            <e p="News17.jpg" t="Include" />
+            <e p="News18.jpg" t="Include" />
+            <e p="News19.jpg" t="Include" />
+            <e p="News2.webp" t="Include" />
+            <e p="News20.jpg" t="Include" />
+            <e p="News21.jpg" t="Include" />
+            <e p="News3.jpg" t="Include" />
+            <e p="News4.jpg" t="Include" />
+            <e p="News5.jpg" t="Include" />
+            <e p="News6.jpg" t="Include" />
+            <e p="News7.jpg" t="Include" />
+            <e p="News8.jpg" t="Include" />
+            <e p="News9.webp" t="Include" />
             <e p="search.png" t="Include" />
           </e>
           <e p="css" t="Include">

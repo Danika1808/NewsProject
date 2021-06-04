@@ -1,13 +1,12 @@
 ﻿@using Domain.Models.News
 
 @model Post
-
-<img src="@Model.Photos.First().Patch" style="height: 300px;">
+<img src="@Model.Photos.First().Patch" style="height: 250px;">
 <div class="caption">
     <ul class="badge-ul">
         <li class="badge-li">
             <a class="badge-a" href="#">
-                <span class="badge-span">@Model.Category.First().Name</span>
+                <span class="badge-span">@Model.Categories.First().Name</span>
             </a>
         </li>
     </ul>

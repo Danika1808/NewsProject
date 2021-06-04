@@ -25,32 +25,30 @@ namespace Presentation.Controllers
 
         public IActionResult Index()
         {
-
             var actualPosts = _context.Posts
-                .Where(x => x.Category.Any(y => y.Name.Equals("Politics") || y.Name.Equals("World")))
                 .OrderByDescending(x => x.Rating)
                 .Take(5)
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .ToList();
 
-            var popularPosts = _context.Posts  
+            var popularPosts = _context.Posts
                 .OrderByDescending(x => x.Rating)
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .Take(6).ToList();
 
             var latestPosts = _context.Posts
                 .OrderByDescending(x => x.Date)
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .Include(x => x.Comments)
                 .Take(5).ToList();
 
             var worldPosts = _context.Posts
-                .Where(x => x.Category.Any(y => y.Name.Equals("World")))
+                .Where(x => x.Categories.Any(y => y.Name.Equals("World")))
                 .OrderByDescending(x => x.Date)
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .Include(x => x.Comments)
                 .Take(5).ToList();

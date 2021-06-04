@@ -28,16 +28,16 @@ namespace Presentation.Components
 
                 .OrderByDescending(x => x.Rating)
                 .Take(6)
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .ToListAsync()
                 }
             }
             .Concat(_context.Posts
-                .Include(x => x.Category)
+                .Include(x => x.Categories)
                 .Include(x => x.Photos)
                 .ToList()
-                .GroupBy(x => x.Category.First().Name)
+                .GroupBy(x => x.Categories.First().Name)
                 .ToDictionary(x => x.Key, x => x.OrderByDescending(y => y.Rating).Take(6).ToList())).ToDictionary(x => x.Key, x => x.Value); ;
 
 

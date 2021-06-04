@@ -13,10 +13,10 @@ namespace Domain.Models.News
         public string Name { get; set; }
         public DateTime Date { get; set; }
         public decimal Rating { get; set; }
-        public List<Category> Category { get; set; }
+        public List<Category> Categories { get; set; } = new List<Category>();
         public string Content { get; set; }
-        public List<Photo> Photos { get; set; }
-        public List<Comment> Comments { get; set; }
+        public List<Photo> Photos { get; set; } = new List<Photo>();
+        public List<Comment> Comments { get; set; } = new List<Comment>();
         public int Views { get; set; }
 
         public Post()
